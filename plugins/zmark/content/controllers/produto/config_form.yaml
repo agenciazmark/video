@@ -1,0 +1,10 @@
+name: Produto
+form: $/zmark/content/models/produto/fields.yaml
+modelClass: Zmark\Content\Models\Produto
+defaultRedirect: zmark/content/produto
+create:
+    redirect: 'zmark/content/produto/update/:id'
+    redirectClose: zmark/content/produto
+update:
+    redirect: zmark/content/produto
+    redirectClose: zmark/content/produto

@@ -1,0 +1,25 @@
+title = "Produto"
+url = "/produto/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Zmark\Content\Models\Produto"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Registro não encontrado"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    {{ record.title }}<Br>
+    {{ record.brand }}
+    
+    {{ record.description|raw }}
+    
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}

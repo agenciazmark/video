@@ -1,0 +1,11 @@
+plugin:
+    name: 'zmark.content::lang.plugin.name'
+    description: 'zmark.content::lang.plugin.description'
+    author: Zmark
+    icon: oc-icon-book
+    homepage: ''
+navigation:
+    main-menu-content:
+        label: Produtos
+        url: zmark/content/produto
+        icon: icon-book

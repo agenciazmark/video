@@ -1,0 +1,4 @@
+title: Produto
+modelClass: Zmark\Content\Models\Produto
+toolbar:
+    buttons: reorder_toolbar
