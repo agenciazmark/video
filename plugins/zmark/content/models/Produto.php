@@ -28,4 +28,12 @@ class Produto extends Model
         return $query->where('status',true);
 
     }
+
+    public $attachOne = [
+        'image' => 'System\Models\File'
+    ];
+
+    public $attachMany = [
+        'gallery' => 'System\Models\File'
+    ];
 }

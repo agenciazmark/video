@@ -27,5 +27,16 @@ notFoundMessage = "Registro não encontrado"
             {{ notFoundMessage }}
         {% endif %}
         </div>
+        <div class="col-12">
+            <img src="{{ record.image.thumb(200,auto) }}" alt="{{ record.image.title }}">
+        </div>
+        
+        {% for galleryImage in record.gallery %}
+            <div class="col-4">
+                <a href="{{ galleryImage.path }}">
+                    <img src="{{ galleryImage.thumb(200,200,{'mode':'crop'}) }}" alt="">
+                </a>
+            </div>
+        {% endfor %}
     </div>
 </div>
