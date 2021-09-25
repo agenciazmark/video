@@ -14,12 +14,18 @@ notFoundMessage = "Registro não encontrado"
 {% set displayColumn = builderDetails.displayColumn %}
 {% set notFoundMessage = builderDetails.notFoundMessage %}
 
-{% if record %}
-    {{ record.title }}<Br>
-    {{ record.brand }}
-    
-    {{ record.description|raw }}
-    
-{% else %}
-    {{ notFoundMessage }}
-{% endif %}
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% if record %}
+            <h2>{{ record.title }}</h2>
+            <p>{{ record.brand }}</p>
+            
+            {{ record.description|raw }}
+            
+        {% else %}
+            {{ notFoundMessage }}
+        {% endif %}
+        </div>
+    </div>
+</div>

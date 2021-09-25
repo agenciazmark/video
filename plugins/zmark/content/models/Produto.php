@@ -8,6 +8,7 @@ use Model;
 class Produto extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    use \October\Rain\Database\Traits\Sortable;
     
 
     /**
@@ -20,4 +21,11 @@ class Produto extends Model
      */
     public $rules = [
     ];
+
+    public function scopeActive($query)
+    {
+
+        return $query->where('status',true);
+
+    }
 }

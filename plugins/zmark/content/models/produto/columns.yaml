@@ -40,3 +40,8 @@ columns:
         searchable: true
         invisible: true
         sortable: true
+    sort_order:
+        label: Ordem
+        type: number
+        searchable: true
+        sortable: true
