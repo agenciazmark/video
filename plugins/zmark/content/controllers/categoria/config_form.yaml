@@ -1,0 +1,10 @@
+name: Categoria
+form: $/zmark/content/models/categoria/fields.yaml
+modelClass: Zmark\Content\Models\Categoria
+defaultRedirect: zmark/content/categoria
+create:
+    redirect: 'zmark/content/categoria/update/:id'
+    redirectClose: zmark/content/categoria
+update:
+    redirect: zmark/content/categoria
+    redirectClose: zmark/content/categoria

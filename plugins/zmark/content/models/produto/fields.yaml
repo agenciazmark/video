@@ -18,6 +18,14 @@ fields:
             type: slug
         type: text
         comment: 'não usar caracteres especiais.'
+    categoria:
+        label: Categoria
+        span: auto
+        nameFrom: title
+        descriptionFrom: description
+        required: 1
+        emptyOption: 'Selecione uma Categoria'
+        type: relation
     brand:
         label: Marca
         span: auto

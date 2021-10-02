@@ -6,6 +6,15 @@ plugin:
     homepage: ''
 navigation:
     main-menu-content:
-        label: Produtos
+        label: Conteúdos
         url: zmark/content/produto
         icon: icon-book
+        sideMenu:
+            side-menu-produtos:
+                label: Produtos
+                url: zmark/content/produto
+                icon: icon-inbox
+            side-menu-categorias:
+                label: Categorias
+                url: zmark/content/categoria
+                icon: icon-sitemap

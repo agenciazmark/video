@@ -1,0 +1,19 @@
+fields:
+    status:
+        label: Ativo
+        span: full
+        default: 1
+        type: switch
+    title:
+        label: Título
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        required: 1
+        preset:
+            field: title
+            type: slug
+        type: text

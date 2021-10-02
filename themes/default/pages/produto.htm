@@ -19,7 +19,8 @@ notFoundMessage = "Registro não encontrado"
       <div class="col-12">
         {% if record %}
             <h2>{{ record.title }}</h2>
-            <p>{{ record.brand }}</p>
+            <p>Marca: {{ record.brand }}</p>
+            <p>Categoria: {{ record.categoria.title }}</p>
             
             {{ record.description|raw }}
             

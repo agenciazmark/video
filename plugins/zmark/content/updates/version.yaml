@@ -6,3 +6,9 @@
 1.0.3:
     - 'Updated table zmark_content_produtos'
     - builder_table_update_zmark_content_produtos.php
+1.0.4:
+    - 'Created table zmark_content_categorias'
+    - builder_table_create_zmark_content_categorias.php
+1.0.5:
+    - 'Updated table zmark_content_produtos'
+    - builder_table_update_zmark_content_produtos_2.php

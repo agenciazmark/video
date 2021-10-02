@@ -22,10 +22,12 @@ class Produto extends Model
     public $rules = [
     ];
 
-    public function scopeActive($query)
+    public function scopeActive($query,$categoria)
     {
 
-        return $query->where('status',true);
+        return $query->where('status',true)->whereHas('categoria', function($q) use($categoria) {
+            $q->where('slug',$categoria);
+        });
 
     }
 
@@ -35,5 +37,15 @@ class Produto extends Model
 
     public $attachMany = [
         'gallery' => 'System\Models\File'
+    ];
+
+    public $belongsTo = [
+        'categoria' => [
+            'Zmark\Content\Models\Categoria',
+            'table' => 'zmark_content_categorias',
+            'key' => 'categoria_id',
+            'order' => 'title'
+        ]
+
     ];
 }

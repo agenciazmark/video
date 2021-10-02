@@ -1,4 +1,17 @@
+[builderList]
+modelClass = "Zmark\Content\Models\Categoria"
+scope = "scopeActive"
+scopeValue = "{{ :scope }}"
+displayColumn = "title"
+noRecordsMessage = "Nenhum registro encontrado"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "sort_order"
+sortDirection = "asc"
 ==
+{% set records = builderList.records %}
+
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Wintercms</a>
@@ -11,9 +24,16 @@
         <li class="nav-item {% if this.page.id == 'home' %}active{% endif %}">
           <a class="nav-link" href="{{ 'home'|page }}">Home</a>
         </li>
-        <li class="nav-item {% if this.page.id == 'produtos' %}active{% endif %}">
-          <a class="nav-link" href="{{ 'produtos'|page }}">Produtos</a>
-        </li>          
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Produtos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% for record in records %}
+                  <a class="dropdown-item" href="{{'produtos'|page({categoria:record.slug})}}">{{record.title}}</a>
+                {% endfor %}
+            </div>
+        </li>       
       </ul>
     </div>
   </nav>

@@ -1,12 +1,12 @@
 title = "Produtos"
-url = "/produtos/:page?"
+url = "/produtos/:categoria/:page?"
 layout = "default"
 is_hidden = 0
 
 [builderList]
 modelClass = "Zmark\Content\Models\Produto"
 scope = "scopeActive"
-scopeValue = "{{ :scope }}"
+scopeValue = "{{ :categoria }}"
 displayColumn = "title"
 noRecordsMessage = "Nenhum registro encontrado"
 detailsPage = "produto"

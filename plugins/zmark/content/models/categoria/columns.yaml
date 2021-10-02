@@ -6,7 +6,7 @@ columns:
         sortable: true
     status:
         label: Ativo
-        type: switch
+        type: text
         searchable: true
         sortable: true
     title:
@@ -19,14 +19,9 @@ columns:
         type: text
         searchable: true
         sortable: true
-    description:
-        label: Descrição
-        type: text
-        searchable: true
-        sortable: true
-    brand:
-        label: Marca
-        type: text
+    sort_order:
+        label: Ordem
+        type: number
         searchable: true
         sortable: true
     created_at:
@@ -38,17 +33,4 @@ columns:
         label: 'Atualizado Em'
         type: datetime
         searchable: true
-        invisible: true
         sortable: true
-    sort_order:
-        label: Ordem
-        type: number
-        searchable: true
-        sortable: true
-    categoria_id:
-        label: Categoria
-        type: text
-        searchable: true
-        sortable: true
-        select: title
-        relation: categoria
