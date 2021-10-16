@@ -1,0 +1,26 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    title:
+        label: Título
+        type: text
+        searchable: true
+        sortable: true
+    category:
+        label: Categoria
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'Criado Em'
+        type: datetime
+        searchable: true
+        sortable: true
+    updated_at:
+        label: 'Atualizado Em'
+        type: datetime
+        searchable: true
+        sortable: true

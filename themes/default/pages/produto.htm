@@ -19,25 +19,40 @@ notFoundMessage = "Registro não encontrado"
       <div class="col-12">
         {% if record %}
             <h2>{{ record.title }}</h2>
-            <p>Marca: {{ record.brand }}</p>
-            <p>Categoria: {{ record.categoria.title }}</p>
-            
+            <p><b>Marca:</b> {{ record.brand }}</p>
+            <p><b>Categoria:</b> {{ record.categoria.title }}</p>
+        </div>
+        <div class="col-3">
+            <img src="{{ record.image.thumb(200,auto) }}" alt="{{ record.image.title }}">
+        </div>
+        <div class="col-9">
             {{ record.description|raw }}
+        </div>            
+            
             
         {% else %}
             {{ notFoundMessage }}
         {% endif %}
-        </div>
-        <div class="col-12">
-            <img src="{{ record.image.thumb(200,auto) }}" alt="{{ record.image.title }}">
-        </div>
+    </div>
+    <h3 class="mt-5 mb-3">Galeria:</h3>
+    <div class="row">
         
         {% for galleryImage in record.gallery %}
-            <div class="col-4">
+            <div class="col-3">
                 <a href="{{ galleryImage.path }}">
                     <img src="{{ galleryImage.thumb(200,200,{'mode':'crop'}) }}" alt="">
                 </a>
             </div>
         {% endfor %}
+    </div>
+    
+    <div class="row">   
+        <div class="col-12">
+            <ul>
+                {% for caracteristica in record.caracteristicas %}
+                    <li>{{caracteristica.category}}: {{caracteristica.title}}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </div>

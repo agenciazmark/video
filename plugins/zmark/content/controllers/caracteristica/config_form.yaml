@@ -1,0 +1,10 @@
+name: Caracteristica
+form: $/zmark/content/models/caracteristica/fields.yaml
+modelClass: Zmark\Content\Models\Caracteristica
+defaultRedirect: zmark/content/caracteristica
+create:
+    redirect: 'zmark/content/caracteristica/update/:id'
+    redirectClose: zmark/content/caracteristica
+update:
+    redirect: zmark/content/caracteristica
+    redirectClose: zmark/content/caracteristica

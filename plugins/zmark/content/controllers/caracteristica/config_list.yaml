@@ -1,0 +1,12 @@
+list: $/zmark/content/models/caracteristica/columns.yaml
+modelClass: Zmark\Content\Models\Caracteristica
+title: Caracteristica
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'zmark/content/caracteristica/update/:id'

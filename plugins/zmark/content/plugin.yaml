@@ -18,3 +18,7 @@ navigation:
                 label: Categorias
                 url: zmark/content/categoria
                 icon: icon-sitemap
+            side-menu-caracteristicas:
+                label: Caracteristicas
+                url: zmark/content/caracteristica
+                icon: icon-sliders

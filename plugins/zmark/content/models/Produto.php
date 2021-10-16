@@ -48,4 +48,13 @@ class Produto extends Model
         ]
 
     ];
+
+    public $belongsToMany = [
+        'caracteristicas' => [
+            'Zmark\Content\Models\Caracteristica',
+            'table' => 'zmark_content_caracteristicas_produtos',
+            'key' => 'produto_id',
+            'otherKey' => "caracteristica_id"
+        ]
+    ];
 }

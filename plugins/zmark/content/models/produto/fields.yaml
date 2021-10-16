@@ -56,3 +56,14 @@ fields:
             mode: crop
             extension: auto
         type: fileupload
+tabs:
+    fields:
+        caracteristicas:
+            label: Caracteristicas
+            span: auto
+            nameFrom: title
+            descriptionFrom: description
+            emptyOption: 'Selecione as Caracteristicas'
+            required: 1
+            type: relation
+            tab: Caracteristicas
