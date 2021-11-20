@@ -16,6 +16,8 @@ class Produto extends Model
      */
     public $table = 'zmark_content_produtos';
 
+    protected $jsonable = ['faq'];
+
     /**
      * @var array Validation rules
      */

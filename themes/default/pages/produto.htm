@@ -45,7 +45,7 @@ notFoundMessage = "Registro não encontrado"
             </div>
         {% endfor %}
     </div>
-    
+    <h3 class="mt-5 mb-3">Características:</h3>
     <div class="row">   
         <div class="col-12">
             <ul>
@@ -54,5 +54,19 @@ notFoundMessage = "Registro não encontrado"
                 {% endfor %}
             </ul>
         </div>
+    </div>
+    <h3 class="mt-5 mb-3">Perguntas e Respostas:</h3>
+     
+    {% for item in record.faq %}
+        <div class="row mb-3">  
+            <div class="col-12">
+                - {{item.pergunta }}
+            </div>
+            <div class="col-12">
+                {{item.resposta }}
+            </div>
+        </div>
+    {% endfor %}
+        
     </div>
 </div>

@@ -67,3 +67,22 @@ tabs:
             required: 1
             type: relation
             tab: Caracteristicas
+        faq:
+            label: FAQ
+            prompt: 'Acrescentar novo item'
+            style: default
+            span: full
+            type: repeater
+            tab: FAQ
+            form:
+                fields:
+                    pergunta:
+                        label: Pergunta
+                        size: large
+                        span: full
+                        type: textarea
+                    resposta:
+                        label: Resposta
+                        size: huge
+                        span: full
+                        type: textarea
