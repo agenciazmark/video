@@ -1,0 +1,11 @@
+<?php
+
+if($record->image)
+{ 
+	echo "<img src='". $value->getThumb(180, 80, ['mode' => 'crop']) . "'>";
+}
+else {
+ echo "SEM IMAGEM";
+} 
+
+?>

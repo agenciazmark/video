@@ -21,9 +21,10 @@ columns:
         sortable: true
     description:
         label: Descrição
-        type: text
+        type: partial
         searchable: true
         sortable: true
+        path: ~/plugins/zmark/content/models/produto/_description_column.htm
     brand:
         label: Marca
         type: text
@@ -52,3 +53,7 @@ columns:
         sortable: true
         select: title
         relation: categoria
+    image:
+        label: Imagem
+        type: partial
+        path: ~/plugins/zmark/content/models/produto/_image_column.htm
