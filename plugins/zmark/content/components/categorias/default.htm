@@ -1,0 +1,9 @@
+{% set categorias = __SELF__.categorias %}
+
+<ul>
+	{% for categoria in categorias %}
+		
+		<li> {{categoria.title}}</li>
+
+	{% endfor %}
+</ul>
